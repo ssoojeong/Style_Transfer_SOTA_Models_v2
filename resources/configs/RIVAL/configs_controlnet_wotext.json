@@ -1,0 +1,14 @@
+{
+    "image_root": ".",
+    "prompt_postfix": ", best quality, extremely detailed",
+    "neg_prompt": ", monochrome, lowres, bad anatomy, worst quality, low quality",
+    "image_exps": [
+        {
+            "mode": "canny",
+            "prompt": "",
+            "image_path": "dataset/style/1001/andre-derain.jpg",
+            "control_image_path": "dataset/content/mscoco2017_canny/000000019742.jpg",
+            "exp_name": "stylized_images/RIVAL/style_1001/content_mscoco2017/000000019742.jpg"
+        }
+    ]
+}
