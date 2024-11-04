@@ -23,12 +23,14 @@
 
 ## &#x1F60E; 인퍼런스 실험 수행 Guide
 
-### 1. Dataset Download
-- [dataset](https://1drv.ms/f/s!AunTciSw__3qjYUHcKZCyw9OaucVZQ?e=nUVnGF): OneDrive '소정' 폴더에서 다운로드
-- 아래 경로에 dataset 업로드
+### 1. Dataset & Resources Download
+- [dataset](https://1drv.ms/f/s!AunTciSw__3qjcswSBomygf2Ebo8AA?e=KkiNYO), [resources](https://1drv.ms/f/s!AunTciSw__3qjc991GMpiprnGnFhew?e=5fRIqo): OneDrive '소정' 폴더에서 다운로드
+- 아래 경로에 dataset, resources 업로드
 
 ```bash
 ./{git clone directory}/dataset
+
+./{git clone directory}/resources
 ```
 
 ### 2. Conda 환경 생성
@@ -38,7 +40,8 @@ conda env create -f environment.yaml
 conda activate ldm
 ```
 
-> **Note**: 모델별로 conda 환경이 달라야 되서 실행 안될 수도 있음, 추후 도커 환경 구축 예정
+> **Note**: 모델별로 conda 환경이 달라야 되서 실행 안될 수도 있음, 
+추후 도커 환경 구축 예정
 
 
 ### 3. Inference 실행
