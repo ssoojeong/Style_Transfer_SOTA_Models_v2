@@ -191,3 +191,4 @@ wandb
 trained_logs/
 dataset/
 stylized_images/
+sota_models/VCT/logs/

@@ -402,7 +402,10 @@ def show_self_attention_comp(attention_store: AttentionStore, res: int, from_whe
 
 def load_512(image_path, left=0, right=0, top=0, bottom=0):
     if type(image_path) is str:
-        image = np.array(Image.open(image_path))[:, :, :3]
+        image_open = np.array(Image.open(image_path))
+        if image_open.ndim == 2:
+            image_open = np.stack((image_open,) * 3, axis=-1)
+        image = image_open[:, :, :3]
     else:
         image = image_path
     # h, w, c = image.shape
