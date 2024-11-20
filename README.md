@@ -1,7 +1,7 @@
 # Style Transfer SOTA Models-v2
 
 
-## &#x1F4E2; Project Report Overview: 241104
+## &#x1F4E2; Project Report Overview
 1. &#x2705; Style Transfer 비교 모델 조사
 2. &#x1F680; 인퍼런스 실험 진행
     - &#x2705; (완료) 실험 진행: MSCOCO 2014 이미지 인퍼런스 테스트
