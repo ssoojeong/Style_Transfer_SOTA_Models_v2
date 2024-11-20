@@ -181,6 +181,7 @@ pyrightconfig.json
 *.jpg
 *.csv
 *.pth
+*.pt
 *.ckpt
 *.bin
 *.safetensors
@@ -191,3 +192,8 @@ wandb
 trained_logs/
 dataset/
 stylized_images/
+sota_models/VCT/logs/
+
+src/
+
+resources/models/

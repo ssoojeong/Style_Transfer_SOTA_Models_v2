@@ -30,7 +30,9 @@ class DropPath(nn.Module):
         return drop_path(x, self.drop_prob, self.training)
 
 from itertools import repeat
-from torch._six import container_abcs
+# from torch._six import container_abcs
+from collections import abc as container_abcs
+
 
 
 # From PyTorch internals

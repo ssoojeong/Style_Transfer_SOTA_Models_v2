@@ -3,6 +3,7 @@ from PIL import Image
 import os, argparse
 import sys
 import importlib
+from pathlib import Path
 
 def get_parser(**parser_kwargs):
     def str2bool(v):
@@ -24,7 +25,7 @@ def get_parser(**parser_kwargs):
     parser.add_argument(
         "--content_types",
         type=str,
-        default='all' #ffhq,mscoco2017
+        default='241118' #all #ffhq,mscoco2017
     )
     parser.add_argument(
         "--style_path",
@@ -34,8 +35,8 @@ def get_parser(**parser_kwargs):
     parser.add_argument(
         "--style_types", 
         type=str,
-        default='all',
-    )
+        default='animeBackgrounds_5_Cloud', #all 
+    ) #animeBackgrounds_1_Dinosaur,animeBackgrounds_2_Sunshine,,animeBackgrounds_4_Fairy,animeBackgrounds_5_Cloud
     parser.add_argument(
         "--ckpt_path",
         type=str,
@@ -49,11 +50,10 @@ def get_parser(**parser_kwargs):
     parser.add_argument(
         "--model",
         type=str,
-        default='StyTR2' #IP-Adapter, VCT, RIVAL, StyTR2, StyleID
+        default='VCT' #IP_Adapter, VCT, RIVAL, StyTR2, StyleID, DiffuseIT, Zero
     )
     opt, unknown = parser.parse_known_args()
     return opt
-
 
 def types_to_str(path, types):
     if types=='all':
@@ -80,7 +80,6 @@ if __name__ == "__main__":
     
     styleid_path = os.path.abspath(f'sota_models/{opt.model}')
     sys.path.insert(0, styleid_path)
-
     
     #생성
     from inference import gen_main, parse_args
