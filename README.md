@@ -36,7 +36,6 @@ git lfs clone https://huggingface.co/sj98/IP-Adapter ./resources/models/IP-Adapt
 
 #2. Stable Diffusion v1.4 (sd-v1-4)
 git lfs clone https://huggingface.co/sj98/sd-v1-4 ./resources/models/sd-v1-4
-
 git lfs clone https://huggingface.co/CompVis/stable-diffusion-v1-4 ./resources/models/stable-diffusion-v1-4
 
 #3. DiffuseIT
