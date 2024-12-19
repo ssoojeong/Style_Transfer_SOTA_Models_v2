@@ -28,16 +28,13 @@
 
 ### 1. Download Pre-trained Models 
 ```bash
+#Install
+git lfs install
+
 #1. IP-Adapter (sd-v1-5)
-git lfs install
-
 git lfs clone https://huggingface.co/sj98/IP-Adapter ./resources/models/IP-Adapter
-```
 
-```bash
 #2. Stable Diffusion v1.4 (sd-v1-4)
-git lfs install
-
 git lfs clone https://huggingface.co/sj98/sd-v1-4 ./resources/models/sd-v1-4
 ```
 
