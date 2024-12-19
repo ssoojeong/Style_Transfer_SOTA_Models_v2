@@ -65,6 +65,7 @@ def opt_to_args(opt, args):
     args.content_types = opt.content_types
     args.style_path = opt.style_path
     args.style_types = opt.style_types
+    args.style_guidance = opt.style_guidance
     
     if opt.model == 'IP_Adapter': #pretrianed 모델 변경
         args.ckpt_path = opt.ckpt_path
