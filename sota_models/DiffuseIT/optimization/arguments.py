@@ -149,7 +149,9 @@ def parse_args() -> argparse.Namespace:
 
     parser.add_argument(
         "--use_ffhq",
-        action="store_true",
+        # action="store_true",
+        default=True,
+        type=bool,
     )
     parser.add_argument(
         "--use_prog_contrast",

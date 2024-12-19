@@ -197,3 +197,5 @@ sota_models/VCT/logs/
 src/
 
 resources/models/
+
+!sota_models/DiffuseIT/src

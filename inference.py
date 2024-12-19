@@ -45,12 +45,12 @@ def get_parser(**parser_kwargs):
     parser.add_argument(
         "--style_guidance",
         type=float,
-        default=0.5
+        default=0.3
     )
     parser.add_argument(
         "--model",
         type=str,
-        default='IP_Adapter' #IP_Adapter, VCT, RIVAL, StyTR2, StyleID, DiffuseIT, Zero
+        default='DiffuseIT' #IP_Adapter, VCT, RIVAL, StyTR2, StyleID, DiffuseIT, Zero
     )
     opt, unknown = parser.parse_known_args()
     return opt
