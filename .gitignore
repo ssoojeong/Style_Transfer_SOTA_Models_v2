@@ -177,8 +177,8 @@ pyrightconfig.json
 
 *.ipynb_checkpoints
 *.ipynb
-*.png
-*.jpg
+# *.png
+# *.jpg
 *.csv
 *.pth
 *.pt
@@ -190,8 +190,8 @@ wandb
 
 #241102
 trained_logs/
-dataset/
-stylized_images/
+# dataset/
+# stylized_images/
 sota_models/VCT/logs/
 
 src/

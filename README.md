@@ -26,14 +26,19 @@
 
 ## &#x1F60E; 인퍼런스 실험 수행 Guide
 
-### 1. Dataset & Resources Download
-- [dataset](https://1drv.ms/f/s!AunTciSw__3qjcswSBomygf2Ebo8AA?e=KkiNYO), [resources](https://1drv.ms/f/s!AunTciSw__3qjc991GMpiprnGnFhew?e=5fRIqo): OneDrive '소정' 폴더에서 다운로드
-- 아래 경로에 dataset, resources 업로드
+### 1. Download Pre-trained Models 
+```bash
+#1. IP-Adapter (sd-v1-5)
+git lfs install
+
+git lfs clone https://huggingface.co/sj98/IP-Adapter ./resources/models/IP-Adapter
+```
 
 ```bash
-./{git clone directory}/dataset
+#2. Stable Diffusion v1.4 (sd-v1-4)
+git lfs install
 
-./{git clone directory}/resources
+git lfs clone https://huggingface.co/sj98/sd-v1-4 ./resources/models/sd-v1-4
 ```
 
 ### 2. Conda 환경 생성

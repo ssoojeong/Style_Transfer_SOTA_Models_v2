@@ -71,13 +71,15 @@ def parse_args(**parser_kwargs):
 def gen_main(opt):
     #1. 모델 로드
     dir_path, model_bin = os.path.split(opt.ckpt_path)
-    ckpt_type = dir_path.split('/')[-1]
-    image_encoder_path = os.path.join(dir_path, 'image_encoder')
+    # ckpt_type = dir_path.split('/')[-1]
+    #image_encoder_path = os.path.join(dir_path, 'image_encoder')
+    image_encoder_path = dir_path
     vae_model_path = "stabilityai/sd-vae-ft-mse"
-    if ckpt_type == 'sd-v1-5':
-        base_model_path = 'stablediffusionapi/stable-diffusion-v1-5' #"runwayml/stable-diffusion-v1-5"
-    else: #'sd-xl'
-        base_model_path = 'CompVis/stable-diffusion-v1-4'
+    # if ckpt_type == 'sd-v1-5':
+    #     base_model_path = 'stablediffusionapi/stable-diffusion-v1-5' #"runwayml/stable-diffusion-v1-5"
+    # else: #'sd-xl'
+    #     base_model_path = 'CompVis/stable-diffusion-v1-4'
+    base_model_path = 'stablediffusionapi/stable-diffusion-v1-5' #"runwayml/stable-diffusion-v1-5"
     noise_scheduler = DDIMScheduler(
     num_train_timesteps=1000,
     beta_start=0.00085,

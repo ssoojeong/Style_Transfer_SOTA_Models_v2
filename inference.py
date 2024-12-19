@@ -20,37 +20,37 @@ def get_parser(**parser_kwargs):
     parser.add_argument(
         "--content_path",
         type=str,
-        default='dataset/content_ef'
+        default='./dataset/content'
     )
     parser.add_argument(
         "--content_types",
         type=str,
-        default='241118' #all #ffhq,mscoco2017
+        default='ffhq' #all #ffhq,mscoco2017
     )
     parser.add_argument(
         "--style_path",
         type=str,
-        default='dataset/style_bg' #wkiart,inst
+        default='./dataset/style' #wkiart,inst
     )
     parser.add_argument(
         "--style_types", 
         type=str,
-        default='animeBackgrounds_5_Cloud', #all 
+        default='all', #all 
     ) #animeBackgrounds_1_Dinosaur,animeBackgrounds_2_Sunshine,,animeBackgrounds_4_Fairy,animeBackgrounds_5_Cloud
     parser.add_argument(
         "--ckpt_path",
         type=str,
-        default=f'resources/models/IP-Adapter/sd-v1-5/ip-adapter_sd15.bin'
+        default=f'resources/models/IP-Adapter/ip-adapter_sd15.bin'
     )
     parser.add_argument(
         "--style_guidance",
         type=float,
-        default=0.6
+        default=0.5
     )
     parser.add_argument(
         "--model",
         type=str,
-        default='VCT' #IP_Adapter, VCT, RIVAL, StyTR2, StyleID, DiffuseIT, Zero
+        default='IP_Adapter' #IP_Adapter, VCT, RIVAL, StyTR2, StyleID, DiffuseIT, Zero
     )
     opt, unknown = parser.parse_known_args()
     return opt
